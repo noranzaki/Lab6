@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'cloud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'cloud44',
+        'USER': 'cloud',
+        'PASSWORD': 'iti123456789_',
+        'HOST':'localhost',
+        'PORT':'3306'
     }
 }
 
@@ -127,6 +131,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+import os
 MEDIA_URL='media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media/')

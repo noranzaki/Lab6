@@ -18,8 +18,7 @@
     <tr >
         <td> {{book.id }}</td>
         <td> {{book.name }}</td>
-        <td> <img src="{% static 'bookstore/images/'|add:book.image%}"
-        width="100" height="100"></td>
+        <td> <img src="{{ book.image_url }}" width="100" height="100"></td>
         <td>{{ book.price }}</td>
         <td><a class="btn btn-info"
         href="{% url 'bookstore.book_details' book.id %}"> Show </a></td>
